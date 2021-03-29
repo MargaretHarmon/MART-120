@@ -1,0 +1,22 @@
+div{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: aqua;
+}
+
+<style>
+     span{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: bisque;
+        font-size: x-large;
+                }
+.myclass{
+    font-size: 59px;
+    color: darkviolet;
+    font-weight: bolder;
+}
+
+#myID {
+    font-size: 35px;
+    color: forestgreen;
+    font-weight: unset;
+}
