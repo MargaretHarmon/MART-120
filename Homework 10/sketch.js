@@ -1,66 +1,79 @@
-var redColor = 100;
-var greenColor = 150;
-var blueColor = 80;
+let x = 200;
+let y = 300;
+let goleft = false;
 
-var x = 100;
-var y = 200;
-var diameter = 50;
 
-var movement = 13;
-// this function is called only once
-function setup()
-{
-
-    createCanvas(400,500);
+function setup() {
+  createCanvas(400, 500);
 }
-/* this function is called continuously
-    while the sketch is open in the browser
-*/
-function draw()
-{
-    background(redColor,greenColor,blueColor);
-    circle(x,y,diameter);
-    circle(x,y,25);
-  if(x >= 400 || x <= 0)
-    {
-       movement *= -1;
-    }
 
-     x += movement;
-}
-  function draw()
-{
-  //eyes
-  circle(128,180,50);
-  circle(260,180,50);
+function draw() {
+  background(123,80,129);
+  
 
+  //eyes//
+ { circle(128,180,50);
+  fill(255,0,150);
+  circle(260,180,50);}
   
-  //mouth
-  ellipse(200,300,300,50);
-  ellipse(x,y,diameter);
+  //mouth//
+  ellipse(x,y,50,50);
+  if(goleft ==false){
+    x= x+2
+  }
+  if(goleft==true){
+    x=x-2
+  }
+  if(x>400)
+  {
+    goleft= true;
+  }
+ if(x<0)
+  {
+    goleft= false;
+  }
+   if(goleft ==false){
+    randomSeed(y= y+4)
+  }
+  if(goleft==true){
+    y=y-4
+  }
+  if(y>500)
+  {
+    goleft= true;
+  }
+ if(x<0)
+  {
+    goleft= false;
+  }
   
+  //pupils//
+  square(x,180,20);
+  square(260,y,20);
   
-  
-  //pupils
-  square(128,180,20);
-  square(260,180,20);
-  
-  //top hat
+  //top hat//
   rect(165,45,60,80);
-  ellipse(195,125,100,20);
+  ellipse(195,y,100,50);
   
   
-  triangle(30,75,58,20,86,75);
+  triangle(x,75,x,20,x,75);
   point(100,75);
   
-  //smile
+  //smile//
   line(50,300, 350, 300);
   
-  //name
+  //name//
   textSize(20);
   text('Margaret Harmon', 220,480);
   
-  //title
-  text('frog lady', 160,30);
+  //title//
+  text( 'frog lady' , 160,30);
+
   
+  
+  
+  
+
+
+
 }
